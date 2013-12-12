@@ -1,3 +1,5 @@
 = Lobby
 
+Creates Login, Register, Confirmation-Mail, Logout and Password Forgotten
+
 This project rocks and uses MIT-LICENSE.
