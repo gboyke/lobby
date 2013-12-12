@@ -1,0 +1,149 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+  common:
+    button:
+      send: 'Abschicken'
+    form:
+      error: "Fehler"
+
+  activerecord:
+    errors:
+      full_messages:
+        format: "{{message}}"
+      messages:
+        confirmation: "Passwortwiederholung ist falsch."
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Bitte gib ein Passwort ein."
+              too_short: "Passwort ist zu kurz."
+            password_confirmation:
+              blank: "Passwort bitte wiederholen."
+            email:
+              taken: 'Diese E-Mail ist schon im System.'
+              blank: "Bitte gib eine E-Mail an."
+              invalid: "Die E-Mail hat ein falsches Format."
+            password_digest:
+              blank: "Bitte gib ein Passwort ein."
+            username:
+              blank: "Bitte gib einen Username an."
+              taken: 'Dieser Username ist schon im System.'
+  activemodel:
+    errors:
+      models:
+        password_forgotten_form:
+          attributes:
+            new_password:
+              too_short: 'Das neue Passwort ist zu kurz (mind. 5 Zeichen)'
+            new_password_confirmation:
+              confirmation: 'Die Passwortbestätigung war falsch.'
+
+  lobby:
+
+    users:
+      new:
+        title: 'Registrieren'
+        label_email: 'E-Mail'
+        label_username: 'Username'
+        label_password: 'Passwort'
+        label_password_confirmation: 'Passwort wiederholen'
+      create:
+        success: "Um die Registrierung abzuschließen, klicke bitte auf den Link den wir Dir soeben geschickt haben."
+
+    sessions:
+      destroy:
+        success: "Du bis nun ausgeloggt. Bis zum nächsten Mal."
+      new:
+        title: 'Login'
+        label_email: 'E-Mail oder Username'
+        label_password: 'Passwort'
+        link_password_forgotten: 'Passwort vergessen?'
+      create:
+        flash:
+          success: "Du bist drin."
+          error:
+            not_active: "Dein Account wurde deaktiviert."
+            not_confirmed: "Bitte erst die Registrierung bestätigen."
+            wrong_password_or_email: "Falsche E-Mail und/oder Passwort"
+
+    info:
+      login_status:
+        logged_in:
+          message_html: "Du bist angemeldet als: %{email}. %{logout_link}"
+          link1: "Abmelden?"
+        logged_out:
+          message_html: "Sie sind nicht angemeldet. %{signin_link} or %{signup_link}"
+          link1: "Registrieren?"
+          link2: "Anmelden?"
+
+    confirmation:
+      registration:
+        title: "Token"
+        resend_signup_token_link: "oder den Token nochmal senden."
+        flash:
+          success: 'Deine Registrierung war erfolgreich. Nun kannst Du Dich einloggen.'
+          error: 'Deine Registrierung konnte nicht bestätigt werden. War der Link korrekt? Sollte Dein E-Mail-Programm den Bestätigungslink nicht richtig darstellen, so kannst Du den Aktivierungstoken auch unten in das Feld kopieren.'
+      resend_signup_token:
+        label_email: "E-Mail"
+        label_password: "Passwort"
+        title: "Aktivierungstoken bitte nochmal zusenden"
+        flash:
+          success: "Der Aktivierungstoken wurde nochmal gesendet"
+          error: "Du bist schon freigeschaltet. Dieser Link ist nicht mehr gültig."
+
+
+    password_forgotten:
+      recover_password_auth:
+        title: 'Jetzt neues Passwort erstellen'
+        label_token: 'Token'
+      order_new_password:
+        title: "Neues Passwort generieren"
+        label_email: "Deine registrierte E-Mail"
+        flash:
+          success: 'Bitte prüfe Deine E-Mails. Dort findest Du einen Link zum Setzen Deines Passwortes.'
+
+    confirmation_mailer:
+
+      new_email_request:
+        subject: 'Neue E-Mail bestätigen'
+        body: "Hallo,
+  um die Änderung Deiner E-Mail-Adress bei XYZ abzuschließen klicke bitte auf folgenden Link:
+
+  %{url}
+
+  Vielen Dank"
+
+      registration:
+        subject: 'Bitte Anmeldung bestätigen'
+        body: "Hallo,
+  vielen Danke für die Registrierung bei XYZ. Um Deine Registrierung abzuschließen klicke bitte auf folgenden Link:
+
+  %{url}
+
+  Vielen Dank"
+
+
+      send_password_reset:
+        subject: 'Neues Passwort angefordert'
+        body: "Hallo,
+  dies ist eine automatisch generierte Nachricht von XYZ für Nutzer die ihre Zugangsdaten vergessen haben. Anbei erhälst Du,
+  wie angefordert, einen Link mit dem Du Dein Passwort neu setzen kannst:
+
+  %{url}
+
+  Vielen Dank"
+
+
+
+      resend_signup_token:
+        subject: 'Neuer Registrierungstoken'
+        body: "Hallo,
+  dies ist eine automatisch generierte Nachricht von XYZ für Nutzer die ihre Registrierungsmail verloren haben. Anbei erhälst Du,
+  wie angefordert, einen Link mit dem Du Deine Registrierung bestätigen kannst:
+
+  %{url}
+
+  Vielen Dank"

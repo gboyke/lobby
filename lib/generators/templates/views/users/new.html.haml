@@ -1,0 +1,20 @@
+%h1
+  = t '.title'
+
+= form_for @user, :url => sign_up_url do |f|
+  = render :partial => "lobby/common/form_errors", :locals => {:object => @user}
+
+  .form-group
+    = f.label :username, t( '.label_username')
+    = f.text_field :username, :class => 'form-control'
+  .form-group
+    = f.label :email, t( '.label_email')
+    = f.text_field :email, :class => 'form-control'
+  .form-group
+    = f.label :password, t( '.label_password' )
+    = f.password_field :password, :class => 'form-control'
+  .form-group
+    = f.label :password_confirmation, t( '.label_password_confirmation' )
+    = f.password_field :password_confirmation, :class => 'form-control'
+  .form-actions
+    = submit_tag t( 'common.button.send' ), :id => 'sign_up_button', :class => 'btn btn-primary'

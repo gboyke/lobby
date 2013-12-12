@@ -1,0 +1,31 @@
+
+const: &const
+  username: true
+
+mailers: &mailers
+  registration_mailer: &mailconfig
+    from: "service@improwiki.com"
+
+development: &development
+  default_url_options: 'localhost:3000'
+  <<: *const
+  <<: *mailers
+
+
+test:
+  default_url_options: 'localhost:3000'
+  <<: *development
+
+cucumber:
+  default_url_options: 'localhost:3000'
+  <<: *development
+
+production:
+  default_url_options: 'new.improwiki.com'
+  <<: *const
+  <<: *mailers
+
+staging:
+  default_url_options: 'improwiki.railscoder.de'
+  <<: *const
+  <<: *mailers

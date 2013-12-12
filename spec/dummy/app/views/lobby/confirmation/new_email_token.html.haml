@@ -1,0 +1,10 @@
+%h1
+  = t '.title'
+
+= form_tag new_email_path, {:id => "new_email_token"} do
+  .form-group
+    = label_tag :token
+    = text_field_tag :token
+
+  .form-actions
+    = submit_tag t( "common.button.send" ), :id => "new_email_token_button", :class => 'btn btn-primary'

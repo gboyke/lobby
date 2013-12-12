@@ -1,0 +1,13 @@
+%h1
+  = t '.title'
+
+= form_tag resend_signup_token_url do
+
+  .form-group
+    = label_tag :email, t( ".label_email" )
+    = text_field_tag :email, params[:email], :class => 'form-control'
+  .form-group
+    = label_tag :password, t( ".label_password" )
+    = password_field_tag :password, nil, :class => 'form-control'
+  .form-actions
+    = submit_tag t( "common.button.send" ), :id => "resend_signup_token_button", :class => 'btn btn-primary'

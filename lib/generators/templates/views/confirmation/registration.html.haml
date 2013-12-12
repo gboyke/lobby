@@ -1,0 +1,11 @@
+%h1
+  = t '.title'
+
+= form_tag confirm_path(:registration) do
+
+  .form-group
+    = text_field_tag :token
+  .form-group
+    = link_to t('.resend_signup_token_link'), resend_signup_token_url, :id => 'resend_signup_token'
+  .form-actions
+    = submit_tag t( "common.button.send" ), :id => "token_button", :class => 'btn btn-primary'

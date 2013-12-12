@@ -1,0 +1,12 @@
+%h1
+  = t '.title'
+= form_tag log_in_url, :id => "loginform" do
+  .form-group
+    = text_field_tag :email, params[:email], :class => "form-control", :placeholder => t( '.label_email' ), :id => 'email'
+  .form-group
+    = password_field_tag :password, nil, :class => "form-control", :placeholder => t( '.label_password' ), :id => 'inputPassword'
+  .form-group
+    = link_to t( '.link_password_forgotten' ), order_new_password_path, :id => 'password_forgotten_link'
+
+  .form-actions
+    = submit_tag(t( 'common.button.send' ), :id => 'log_in_button', :class => 'btn btn-primary')

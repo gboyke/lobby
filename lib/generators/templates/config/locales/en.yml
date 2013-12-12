@@ -1,0 +1,148 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  common:
+    button:
+      send: 'send'
+    form:
+      error: "error"
+
+  activerecord:
+    errors:
+      full_messages:
+        format: "{{message}}"
+      messages:
+        confirmation: "Repeat Password is incorrect."
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Please enter a password."
+              too_short: "Password is too short."
+            password_confirmation:
+              blank: "Please verify the password."
+            email:
+              taken: 'This e-mail is already in the system.'
+              blank: "Please enter an e-mail."
+              invalid: "The e-mail has an incorrect format."
+            password_digest:
+              blank: "Please enter a password"
+            username:
+              blank: "Please enter a user name."
+              taken: 'This username is already in the system.'
+  activemodel:
+    errors:
+      models:
+        password_forgotten_form:
+          attributes:
+            new_password:
+              too_short: 'The new password is too short (minimum 5 characters)'
+            new_password_confirmation:
+              confirmation: 'Incorrect password confirmation.'
+
+  lobby:
+
+    users:
+      new:
+        title: 'Register'
+        label_email: 'e-mail'
+        label_username: 'Username'
+        label_password: 'Password'
+        label_password_confirmation: 'Password confirmation'
+      create:
+        success: "To complete the registration please click on the link we've just sent you."
+
+    sessions:
+      destroy:
+        success: "You logged out. Bye."
+      new:
+        title: 'Login'
+        label_email: 'e-mail or username'
+        label_password: 'password'
+        link_password_forgotten: 'Forgot Password?'
+      create:
+        flash:
+          success: "You're in."
+          error:
+            not_active: "Your account has been disabled."
+            not_confirmed: "Please confirm the registration first."
+            wrong_password_or_email: "Incorrect email and / or password"
+
+    info:
+      login_status:
+        logged_in:
+          message_html: "You are logged in as: %{email}. %{logout_link}"
+          link1: "log off?"
+        logged_out:
+          message_html: "You are not logged in. %{signin_link} or %{signup_link}"
+          link1: "Sign up?"
+          link2: "Log in?"
+
+    confirmation:
+      registration:
+        title: "Token"
+        resend_signup_token_link: "or send token again."
+        flash:
+          success: 'Your registration was successful. Now you can login'
+          error: 'Your registration could not be confirmed. Was the link incorrect? If your email program does not properly represent the confirmation link, so you can copy it to the field activation token below.'
+      resend_signup_token:
+        label_email: "E-mail"
+        label_password: "Password"
+        title: "Send activation token again"
+        flash:
+          success: "The activation token was again sent"
+          error: "You are already confirmed. This link is no longer valid."
+
+
+    password_forgotten:
+      recover_password_auth:
+        title: 'Create new password'
+        label_token: 'Token'
+      order_new_password:
+        title: "Generate new password"
+        label_email: "Your registered e-mail"
+        flash:
+          success: 'Please check your e-mails. There you will find a link to set your password.'
+
+    confirmation_mailer:
+
+      new_email_request:
+        subject: 'Confirm new email'
+        body: "Hallo,
+  to complete the change of your e-mail address at XYZ please click on the following link:
+
+  %{url}
+
+  Thank you very much"
+
+      registration:
+        subject: 'Please confirm registration'
+        body: "Hello,
+  many Thanks for registering with XYZ. To complete your registration please click on the following link:
+
+  %{url}
+
+  Thank you very much"
+
+
+      send_password_reset:
+        subject: 'Requested new password'
+        body: "Hello.
+  This is an automatically generated message from XYZ for users who have forgotten their login details. Enclosed you will receive,
+   as requested, a link with which you can generate your new password:
+
+  %{url}
+
+  Thank you very much"
+
+
+      resend_signup_token:
+        subject: 'New registration token'
+        body: "Hello.
+  This is an automatically generated message from XYZ for users who have lost their registration email. Enclosed you will receive,
+   as requested, a link with which you can confirm your registration:
+
+  %{url}
+
+  VThank you very much"
