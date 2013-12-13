@@ -99,6 +99,9 @@ de:
 
 
     password_forgotten:
+      create:
+        notice:
+          success: "Das neue Password wurde erfolgreich angelegt."
       recover_password_auth:
         title: 'Jetzt neues Passwort erstellen'
         label_token: 'Token'

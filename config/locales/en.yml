@@ -99,6 +99,9 @@ en:
 
 
     password_forgotten:
+      create:
+        notice:
+          success: "New password created."
       recover_password_auth:
         title: 'Create new password'
         label_token: 'Token'
