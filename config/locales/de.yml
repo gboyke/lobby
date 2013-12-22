@@ -97,8 +97,16 @@ de:
           success: "Der Aktivierungstoken wurde nochmal gesendet"
           error: "Du bist schon freigeschaltet. Dieser Link ist nicht mehr gültig."
 
-
     password_forgotten:
+      new:
+        title: "Neues Passwort erstellen"
+        label_new_password: "Neues Passwort"
+        label_new_password_confirmation: "Neues Passwort wiederholen"
+        flash:
+          success: "Dein Passwort wurde geändert. Du kannst Dich nun mit Deinem neuen Passwort einloggen."
+      create:
+        notice:
+          success: "Dein Passwort wurde geändert."
       create:
         notice:
           success: "Das neue Password wurde erfolgreich angelegt."
